@@ -1,0 +1,6 @@
+.popup__image {
+  max-width: 80vh;
+  max-height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
