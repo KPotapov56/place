@@ -1,33 +1,31 @@
 class FormValidator {
-  constructor(form, button) {
+  constructor(form, errorMessages, button) {
     this.form = form;
     this.button = button;
-    this.errorMessages = {
-      empty: 'Это обязательное поле',
-      wrongLength: 'Должно быть от 2 до 30 символов',
-      wrongUrl: 'Здесь должна быть ссылка'
-    }
+    this.empty = errorMessages.empty;
+    this.wrongLength = errorMessages.wrongLength;
+    this.wrongUrl = errorMessages.wrongUrl;
   }
 
   checkInputValidity(input) { //Метод показывает ошибку, если инпуты не проходят валидацию. Если проходят — скрывает ошибку.
-    this.errorElem = input.nextElementSibling;
+    this.errorElem = document.getElementById(input.id + '-error');
 
     input.setCustomValidity("");
 
     if (input.validity.valueMissing) {
-      input.setCustomValidity(this.errorMessages.empty);
+      input.setCustomValidity(this.empty);
       this.errorElem.textContent = input.validationMessage;
       return this.errorElem
     }
 
     if (input.validity.tooShort || input.validity.tooLong) {
-      input.setCustomValidity(this.errorMessages.wrongLength);
+      input.setCustomValidity(this.wrongLength);
       this.errorElem.textContent = input.validationMessage;
       return false
     }
 
     if (input.validity.typeMismatch && input.type === 'url') {
-      input.setCustomValidity(this.errorMessages.wrongUrl);
+      input.setCustomValidity(this.wrongUrl);
       this.errorElem.textContent = input.validationMessage;
       return false
     }
@@ -62,8 +60,8 @@ class FormValidator {
 
   cleanError() { //очистка ошибок
     const error = this.form.querySelectorAll('.error');
-    error.forEach(function (popup) {
-      popup.textContent = '';
+    error.forEach(function (form) {
+      form.textContent = '';
     });
   }
 }

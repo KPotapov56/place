@@ -1,18 +1,19 @@
 class UserInfo {
-  constructor(userName, userJob, name, job) {
-    this.userName = userName;
-    this.userJob = userJob;
+  constructor(nameContainer, aboutContainer, avatarContainer) {
+    this.nameContainer = nameContainer;
+    this.aboutContainer = aboutContainer;
+    this.avatarContainer = avatarContainer;
+  }
+
+  setUserInfo(name, about, avatar) {  //обновляет данные внутри класса
     this.name = name;
-    this.job = job;
+    this.about = about;
+    this.avatar = avatar;
   }
 
-  setUserInfo() { //отображает текущие данные
-    this.name.value = this.userName.textContent;
-    this.job.value = this.userJob.textContent;
-  }
-
-  updateUserInfo() { //обновляет данные
-    this.userName.textContent = this.name.value;
-    this.userJob.textContent = this.job.value;
+  updateUserInfo() {  //отображает данные на странице
+    this.nameContainer.textContent = this.name;
+    this.aboutContainer.textContent = this.about;
+    this.avatarContainer.style.backgroundImage = this.avatar;
   }
 }

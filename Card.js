@@ -12,7 +12,10 @@ class Card {
         </div>
         <div class="place-card__description">
           <h3 class="place-card__name"></h3>
-          <button class="place-card__like-icon"></button>
+          <div class="place-card__like">
+            <button class="place-card__like-icon"></button>
+            <p class="place-card__qty-of-likes"></p>
+          <div>
         </div>
         </div>`;
     const placeCard = document.createElement("div");
@@ -28,28 +31,23 @@ class Card {
 
   remove() {
     this.currentCard = event.target.closest('.place-card');
+    this.currentCard.removeEventListener('click', this.setImgUrl);
     this.currentCard.remove();
   }
 
   like() {
     this.classList.toggle('place-card__like-icon_liked');
-    /*
-     Можно лучше:
-     - Лучше classList искать у элементы карточки, а не изменять classList анпрямую из this
-    */
   }
 
   setImgUrl() {
-    this.imageOpenCallback(this.item.link);
+     if (event.target.classList.contains('place-card__image')) {
+      this.imageOpenCallback(this.item.link);
+      }   
   }
 
   setEventListeners() {
     this.likeIcon.addEventListener('click', this.like);
     this.deleteIcon.addEventListener('click', this.remove);
-    this.image.addEventListener('click', () => {
-      if (event.target.classList.contains('place-card__image')) {
-        this.setImgUrl(event.target)
-      }
-    });
+    this.image.addEventListener('click', this.setImgUrl);
   }
 }
