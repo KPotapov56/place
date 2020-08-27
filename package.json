@@ -1,7 +1,6 @@
 {
   "name": "place",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
   "main": "script.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -16,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/KPotapov56/place/issues"
   },
-  "homepage": "https://github.com/KPotapov56/place#readme"
+  "homepage": "https://github.com/KPotapov56/place#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
