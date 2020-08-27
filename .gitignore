@@ -1,2 +1,4 @@
-node_modules
-README.md
+.idea
+node_modules/
+dist/
+.DS_Store
