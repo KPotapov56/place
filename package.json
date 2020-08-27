@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/KPotapov56/place/issues"
   },
+  "scripts": {
+    "build": "webpack"
+  },
   "homepage": "https://github.com/KPotapov56/place#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",

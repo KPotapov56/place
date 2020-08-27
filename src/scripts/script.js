@@ -4,6 +4,7 @@ import CardList from './CardList.js';
 import FormValidator from './FormValidator.js';
 import Popup from './Popup.js';
 import UserInfo from './UserInfo.js';
+import '../pages/index.css';
 
 const config = {
   url: 'https://nomoreparties.co/cohort12',
