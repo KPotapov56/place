@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(item, imageOpenCallback) {
     this.item = item;
     this.imageOpenCallback = imageOpenCallback;

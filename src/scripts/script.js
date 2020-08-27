@@ -1,3 +1,10 @@
+import Api from './Api.js';
+import Card from './Card.js';
+import CardList from './CardList.js';
+import FormValidator from './FormValidator.js';
+import Popup from './Popup.js';
+import UserInfo from './UserInfo.js';
+
 const config = {
   url: 'https://nomoreparties.co/cohort12',
   headers: {
