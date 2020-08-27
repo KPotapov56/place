@@ -2,23 +2,31 @@
   "name": "place",
   "version": "0.0.1",
   "main": "script.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open --watch"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KPotapov56/place.git"
   },
-  "author": "",
+  "author": "Kirill Potapov <kpotapov56@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KPotapov56/place/issues"
   },
   "homepage": "https://github.com/KPotapov56/place#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  }
+    "webpack-dev-server": "^3.11.0",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "description": "",
+  "dependencies": {},
+  "keywords": [
+    "html",
+    "css",
+    "JS",
+    "Webpack"
+  ]
 }
