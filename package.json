@@ -1,7 +1,7 @@
 {
   "name": "place",
   "version": "0.0.1",
-  "main": "script.js",
+  "main": "./src/scripts/script.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KPotapov56/place.git"
@@ -41,7 +41,7 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-md5-hash": "0.0.6"
   },
-  "description": "",
+  "description": "11 sprint homework",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1"

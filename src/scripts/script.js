@@ -6,8 +6,10 @@ import Popup from './Popup.js';
 import UserInfo from './UserInfo.js';
 import '../pages/index.css';
 
+
+const API_URL = process.env.NODE_ENV === "production" ? "https://nomoreparties.co" : "http://nomoreparties.co";
 const config = {
-  url: 'https://nomoreparties.co/cohort12',
+  url: `${API_URL}/cohort12`,
   headers: {
     authorization: '044b3123-f80b-4642-b8a9-023004780c6a',
     'Content-Type': 'application/json'
